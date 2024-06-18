@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form" data-form>
+      <h2>Contact Us</h2>
+      <div class="name-section">
+        <!-- First Name -->
+        <div class="first-name">
+          <label for="first-name">First Name *</label>
+          <input data-first-name type="text" id="first-name" />
+          <p data-first-name-error class="error"></p>
+        </div>
+        <!-- Last Name -->
+        <div class="last-name">
+          <label for="last-name">Last Name * </label>
+          <input type="text" id="last-name" data-last-name />
+          <p data-last-name-error class="error"></p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="email">
+        <label for="email">Email Address * </label>
+        <input type="email" id="email" data-email />
+        <p data-email-error class="error"></p>
+      </div>
+      <!-- Query Type -->
+      <div class="query">
+        <p>Query Type *</p>
+        <label class="general-query" for="general-query"
+          ><input data-general name="option" type="radio" id="general-query" />
+          General Enquiry
+        </label>
+        <label class="support-query" for="support-query"
+          ><input data-support name="option" type="radio" id="support-query" />
+          Support Enquiry
+        </label>
+        <p data-query-error class="error"></p>
+      </div>
+      <!-- Message -->
+      <div class="message">
+        <label for="message">Message *</label>
+        <textarea data-message rows="3" name="message" id="message"></textarea>
+        <p data-message-error class="error"></p>
+      </div>
+      <!-- consent box -->
+      <div class="consent">
+        <input type="checkbox" id="checkbox" data-checkbox />
+        <label for="checkbox">I consent to being contacted by the team *</label>
+        <p data-consent-error class="error"></p>
+      </div>
+      <!-- Submit button -->
+      <div class="submit">
+        <input data-submit type="submit" value="Submit" />
+      </div>
+      <!-- Success message -->
+    </form>
+    <div data-success-message class="success">
+      <div class="icon-message">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="21"
+          fill="none"
+          viewBox="0 0 20 21"
+          style="width: 20px; height: 20px; margin-right: 10px"
+        >
+          <path
+            fill="white"
+            d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"
+          />
+        </svg>
+        <h3 style="display: inline">Message Sent!</h3>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon</p>
+    </div>
+  </body>
+</html>

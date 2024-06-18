@@ -1,0 +1,255 @@
+@font-face {
+  font-family: 'Karla';
+  src: local('Karla'), url('./assets/fonts/Karla-VariableFont_wght.ttf');
+}
+
+* {
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: hsl(148, 38%, 91%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#form {
+  min-width: 35%;
+  margin: 7em 0;
+  height: max-content;
+  box-sizing: border-box;
+  border-radius: 1em;
+  background: hsl(0, 0%, 100%);
+  padding: 1em 1.5em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4em repeat(4, 0.5fr);
+}
+
+h2 {
+  font-size: 1.5em;
+  grid-column: 1 / 3;
+}
+
+.name-section {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1em;
+}
+
+.first-name {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.last-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.first-name input,
+.last-name input {
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 0.5em;
+  height: 3em;
+  margin-top: 0.75em;
+  padding-left: 1em;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  grid-column: 1 / 4;
+}
+
+.email input {
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 0.5em;
+  height: 3em;
+  margin-top: 0.75em;
+  font-size: 1em;
+  padding-left: 1em;
+}
+
+.query {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1em;
+  margin-top: -0.75em;
+}
+
+.query p {
+  grid-column: 1 / 3;
+}
+
+.general-query,
+.support-query {
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.general-query input,
+.support-query input {
+  margin: 0 1em;
+  width: 1.25em;
+  height: 1.25em;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 4;
+}
+
+.message textarea {
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 0.5em;
+  margin-top: 0.75em;
+  resize: none;
+  padding: 1em;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.consent {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  align-items: center;
+}
+
+.consent label {
+  cursor: pointer;
+}
+
+.consent input {
+  width: 1em;
+  height: 1em;
+}
+
+#checkbox {
+  width: 1.25em;
+  height: 1.25em;
+  margin-right: 1em;
+  cursor: pointer;
+}
+
+.submit {
+  grid-column: 1 / 4;
+  text-align: start;
+  align-self: center;
+}
+
+.submit input {
+  width: 100%;
+  height: 3rem;
+  border-radius: 0.5em;
+  border: none;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.error {
+  color: hsl(0, 66%, 54%);
+  grid-column: 1 / 4;
+}
+
+.first-name input:active,
+.first-name input:focus,
+.last-name input:active,
+.last-name input:focus,
+.email input:active,
+.email input:focus,
+.message textarea:focus,
+.message textarea:active {
+  outline: none;
+  border: 2px solid hsl(169, 82%, 27%);
+}
+
+.success {
+  position: absolute;
+  top: -100%;
+  max-height: 7em;
+  box-sizing: border-box;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 1em;
+  background-color: hsl(169, 82%, 27%);
+  color: white;
+  border-radius: 1em;
+  outline: none;
+}
+
+.success h3 {
+  padding: 0;
+  margin: 0.5em 0;
+}
+
+.success p {
+  margin: 0.5em 0;
+  padding: 0 0;
+}
+
+.icon-message {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+@media (min-width: 260px) and (max-width: 750px) {
+  #form {
+    margin: 2em;
+  }
+
+  .name-section {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .query {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 1em;
+  }
+
+  .general-query {
+    grid-column: 1 / 3;
+  }
+
+  .support-query {
+    grid-column: 1 / 3;
+  }
+
+  .message {
+    margin-top: -1em;
+  }
+
+  .message textarea {
+    width: auto;
+  }
+}
